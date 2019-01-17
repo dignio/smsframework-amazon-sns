@@ -92,11 +92,11 @@ Example
 
    from smsframework import OutgoingMessage
 
-   # Send a regular, low-cose message (when the default message type is "promotional"
+   # Send a regular, low-cost message (when the default message type is "promotional")
    gateway.send(OutgoingMessage('+19998887766', 'Test'))
 
    # escalate=True sends a 'transactional' message: Amazon will use reliable delivery
-   gateway.send(OutgoingMessage('19998887766', 'Test').options(senderId='kolypto', escalate=True))
+   gateway.send(OutgoingMessage('+19998887766', 'Test').options(senderId='kolypto', escalate=True))
 
 Supported Options
 =================
