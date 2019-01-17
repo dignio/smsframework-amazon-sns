@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 setup(
     # http://pythonhosted.org/setuptools/setuptools.html
     name='smsframework-amazon-sns',
-    version='0.0.1-0',
+    version='0.0.1',
     author='Mark Vartanyan',
     author_email='kolypto@gmail.com',
 
@@ -23,6 +23,7 @@ setup(
 
     install_requires=[
         'smsframework >= 0.0.9',
+        'boto3 >= 1.4'
     ],
     extras_require={
         'receiver': ['flask >= 0.10'],  # sms receiving
