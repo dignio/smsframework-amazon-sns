@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 setup(
     # http://pythonhosted.org/setuptools/setuptools.html
     name='smsframework-amazon-sns',
-    version='0.0.1',
+    version='0.0.2',
     author='Mark Vartanyan',
     author_email='kolypto@gmail.com',
 
