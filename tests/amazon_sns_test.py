@@ -49,8 +49,8 @@ class AmazonSNSProviderTest(unittest.TestCase):
             st.add_response('publish',
                             expected_params={'PhoneNumber': '+1999', 'Message': 'test 2',
                                              'MessageAttributes': {
-                                                 'SenderID': {'DataType': 'String', 'StringValue': 'kolypto'},
-                                                 'SMSType': {'DataType': 'String', 'StringValue': 'Transactional'},
+                                                 'AWS.SNS.SMS.SenderID': {'DataType': 'String', 'StringValue': 'kolypto'},
+                                                 'AWS.SNS.SMS.SMSType': {'DataType': 'String', 'StringValue': 'Transactional'},
                                              }},
                             service_response={'MessageId': '2'}
                             )
