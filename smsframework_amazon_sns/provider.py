@@ -37,12 +37,12 @@ class AmazonSNSProvider(IProvider):
         #if message.provider_options.status_report:
         #if message.provider_options.expires:)
         if message.provider_options.senderId:
-            params['SenderID'] = {'DataType': 'String', 'StringValue': message.provider_options.senderId}
+            params['AWS.SNS.SMS.SenderID'] = {'DataType': 'String', 'StringValue': message.provider_options.senderId}
         if message.provider_options.escalate:
-            params['SMSType'] = {'DataType': 'String', 'StringValue': 'Transactional'}
+            params['AWS.SNS.SMS.SMSType'] = {'DataType': 'String', 'StringValue': 'Transactional'}
 
         if 'MaxPrice' in message.provider_params:
-            params['MaxPrice'] = {'DataType': 'Number', 'StringValue': str(message.provider_params.pop('MaxPrice'))}
+            params['AWS.SNS.SMS.MaxPrice'] = {'DataType': 'Number', 'StringValue': str(message.provider_params.pop('MaxPrice'))}
         params.update(message.provider_params)
 
         # Send
